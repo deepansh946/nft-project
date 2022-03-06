@@ -8,7 +8,7 @@ import { Spinner, Toast, ToastContainer } from "react-bootstrap";
 // Constants
 const TWITTER_HANDLE = "deepansh946";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const CONTRACT_ADDRESS = "0xBd321614566D766eE4a2A9c8cfe8e4EF8Cf6c928";
+const CONTRACT_ADDRESS = "0x8d1f5aEdc7031A77ed531D073101aaF9F78C1C2B";
 
 const App = () => {
   const [account, setAccount] = React.useState();
@@ -56,6 +56,7 @@ const App = () => {
 
   const mintNFT = async () => {
     setLoading(true);
+    setTxnHash(undefined);
 
     try {
       const { ethereum } = window;
